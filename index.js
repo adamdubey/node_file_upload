@@ -1,7 +1,3 @@
-var http = require('http');
+var server = require('./server');
 
-http.createServer(function(request, response){
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.write('Hello, Cruel World');
-	response.end();
-}).listen(8888);
+server.start();
